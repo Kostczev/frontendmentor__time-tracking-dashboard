@@ -1,0 +1,136 @@
+.dashboard {
+   &__work {
+      & .dashboard__icon {
+         position: absolute;
+         right: 17px;
+         top: -13px;
+      }
+      &.dashboard__tile {
+         background: $light-red-work;
+      }
+   }
+
+   &__play {
+      & .dashboard__icon {
+         position: absolute;
+         right: 21px;
+         top: -5px;
+      }
+      &.dashboard__tile {
+         background: $soft-blue;
+      }
+   }
+
+   &__study {
+      & .dashboard__icon {
+         position: absolute;
+         right: 16px;
+         top: -5px;
+      }
+      &.dashboard__tile {
+         background: $light-red-study;
+      }
+   }
+
+   &__exercise {
+      & .dashboard__icon {
+         position: absolute;
+         right: 17px;
+         top: 0px;
+      }
+      &.dashboard__tile {
+         background: $lime-green;
+      }
+   }
+
+   &__social {
+      & .dashboard__icon {
+         position: absolute;
+         right: 15px;
+         top: -15px;
+      }
+      &.dashboard__tile {
+         background: $violet;
+      }
+   }
+
+   &__self-care {
+      & .dashboard__icon {
+         position: absolute;
+         right: 13px;
+         top: -11px;
+      }
+      &.dashboard__tile {
+         background: $soft-orange;
+      }
+   }
+
+   &__ellipsis {
+      cursor: pointer;
+   }
+
+   &__tile {
+      position: relative;
+      overflow: hidden;
+      border-radius: 13px;
+      margin-bottom: 24px;
+   }
+
+   &__tracking {
+      transition: .3s;
+      transition-property: background;
+      position: relative;
+      z-index: 1;
+      
+      margin-top: 38px;
+      height: 100%;
+      padding: 30px 24px;
+      border-radius: 13px;
+      cursor: pointer;
+      background: $dark-blue;
+      &:hover {
+         background: #34397b;
+      }
+   }
+   &__tracking-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
+   }
+   &__tracking-title {
+      font-weight: 500;
+      margin-bottom: 15px;
+   }
+   &__ellipsis {
+      position: absolute;
+      top: 75px;
+      right: 30px;
+      z-index: 2;
+      transition: .3s;
+      transition-property: fill;
+      height: 20px;
+      fill: $pale-blue;
+      padding: 7px 0;
+      &:hover {
+         fill: #fff;
+      }
+   }
+
+   &__tracking-times {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__tracking-time {
+      transition: .3s;
+      transition-property: font-size;
+      font-size: 30px;
+   }
+   
+   &__litel-text {
+      color: $pale-blue;
+      font-size: 16px;
+   }
+}

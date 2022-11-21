@@ -1,0 +1,41 @@
+@media (min-width: 830px) {
+   .dashboard {
+      &__tile {
+         margin-bottom: 0;
+      }
+      &__tracking {
+         margin-top: 45px;
+         padding: 30px;
+      }
+      &__tracking-title {
+         margin-bottom: 35px;
+      }
+      &__tracking-time {
+         font-size: 38px;
+         margin-bottom: 20px;
+      }
+      &__tracking-times {
+         display: block;
+      }
+   }
+}
+
+@media (min-width: 880px) {
+   .dashboard__tracking-time {
+      font-size: 44px;
+      margin-bottom: 20px;
+   }
+}
+@media (min-width: 950px) {
+   .dashboard__tracking-time {
+      font-size: 50px;
+      margin-bottom: 20px;
+   }
+}
+
+@media (min-width: 1050px) {
+   .dashboard__tracking-time {
+      font-size: 56px;
+      margin-bottom: 20px;
+   }
+}

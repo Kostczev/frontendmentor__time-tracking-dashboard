@@ -1,0 +1,60 @@
+.dashboard {
+   &__main-tile{
+      margin-bottom: 24px;
+      background: $dark-blue;
+      border-radius: 13px;
+   }
+   
+   &__persona {
+      background: $blue;
+      border-radius: 13px;
+      padding: 30px;
+
+      display: flex;
+   }
+
+   &__photo {
+      height: 70px;
+      width: 70px;
+      margin-right: 18px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+   }
+
+   &__persona-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   &__name {
+      margin-top: 10px;
+      font-size: 24px;
+      font-weight: 300;
+   }
+
+   &__links {
+      display: flex;
+      padding-top: 25px;
+      justify-content: space-around;
+      & li {
+         transition: .3s;
+         transition-property: color;
+
+         color: $pale-blue;
+         font-size: 16px;
+         font-weight: 500px;
+         cursor: pointer;
+         padding: 5px;
+         margin-bottom: 25px;
+
+         &:hover {
+            color: #fff;
+         }
+
+         &.active {
+            color: #fff;
+         }
+      }
+   }
+}

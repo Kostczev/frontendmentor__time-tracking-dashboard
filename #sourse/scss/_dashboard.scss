@@ -1,0 +1,12 @@
+@media (min-width: 830px) {
+   .dashboard {
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+      gap: 30px;
+   }
+}
+
+@import "_dashboard-main-tile";
+@import "_dashboard-main-tile-pc";
+@import "_dashboard-tile";
+@import "_dashboard-tile-pc";

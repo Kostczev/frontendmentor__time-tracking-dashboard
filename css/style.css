@@ -1,0 +1,337 @@
+@charset "UTF-8";
+/*отступы*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*перещет области*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*отключение обводки*/
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+/*делаем блочными некоторые теги*/
+nav, footer, header, aside {
+  display: block;
+}
+
+/*Уравниваем поведение шрифтов и тд для разных браузеров (также запрещает самовольное увеличени шрифтов (айфон))*/
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*Говоорим тегам наследовать семейство шрифта*/
+input, button, textarea {
+  font-family: inherit;
+  display: block;
+}
+
+/*еще куча фич, таких как отклчение крестиков и отступов в разных браузерах*/
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*Обнуляем все заголовки*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  background: hsl(226deg, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+
+.wrapper {
+  padding: 80px 24px;
+  max-width: 500px;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 830px) {
+  .wrapper {
+    max-width: 1111px;
+    padding: 0 15px;
+  }
+}
+@media (min-width: 830px) {
+  .dashboard {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+.dashboard__main-tile {
+  margin-bottom: 24px;
+  background: hsl(235deg, 46%, 20%);
+  border-radius: 13px;
+}
+.dashboard__persona {
+  background: hsl(246deg, 80%, 60%);
+  border-radius: 13px;
+  padding: 30px;
+  display: flex;
+}
+.dashboard__photo {
+  height: 70px;
+  width: 70px;
+  margin-right: 18px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.dashboard__persona-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dashboard__name {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 300;
+}
+.dashboard__links {
+  display: flex;
+  padding-top: 25px;
+  justify-content: space-around;
+}
+.dashboard__links li {
+  transition: 0.3s;
+  transition-property: color;
+  color: hsl(236deg, 100%, 87%);
+  font-size: 16px;
+  font-weight: 500px;
+  cursor: pointer;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+.dashboard__links li:hover {
+  color: #fff;
+}
+.dashboard__links li.active {
+  color: #fff;
+}
+
+@media (min-width: 830px) {
+  .dashboard__main-tile {
+    grid-row: 1/3;
+    margin-bottom: 0;
+  }
+  .dashboard__persona {
+    padding: 35px 30px;
+    display: block;
+  }
+  .dashboard__photo {
+    height: 85px;
+    width: 85px;
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+  .dashboard__name {
+    margin: 10px 0 40px 0;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .dashboard__links {
+    display: block;
+    margin-left: 25px;
+  }
+}
+.dashboard__work .dashboard__icon {
+  position: absolute;
+  right: 17px;
+  top: -13px;
+}
+.dashboard__work.dashboard__tile {
+  background: hsl(15deg, 100%, 70%);
+}
+.dashboard__play .dashboard__icon {
+  position: absolute;
+  right: 21px;
+  top: -5px;
+}
+.dashboard__play.dashboard__tile {
+  background: hsl(195deg, 74%, 62%);
+}
+.dashboard__study .dashboard__icon {
+  position: absolute;
+  right: 16px;
+  top: -5px;
+}
+.dashboard__study.dashboard__tile {
+  background: hsl(348deg, 100%, 68%);
+}
+.dashboard__exercise .dashboard__icon {
+  position: absolute;
+  right: 17px;
+  top: 0px;
+}
+.dashboard__exercise.dashboard__tile {
+  background: hsl(145deg, 58%, 55%);
+}
+.dashboard__social .dashboard__icon {
+  position: absolute;
+  right: 15px;
+  top: -15px;
+}
+.dashboard__social.dashboard__tile {
+  background: hsl(264deg, 64%, 52%);
+}
+.dashboard__self-care .dashboard__icon {
+  position: absolute;
+  right: 13px;
+  top: -11px;
+}
+.dashboard__self-care.dashboard__tile {
+  background: hsl(43deg, 84%, 65%);
+}
+.dashboard__ellipsis {
+  cursor: pointer;
+}
+.dashboard__tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 13px;
+  margin-bottom: 24px;
+}
+.dashboard__tracking {
+  transition: 0.3s;
+  transition-property: background;
+  position: relative;
+  z-index: 1;
+  margin-top: 38px;
+  height: 100%;
+  padding: 30px 24px;
+  border-radius: 13px;
+  cursor: pointer;
+  background: hsl(235deg, 46%, 20%);
+}
+.dashboard__tracking:hover {
+  background: #34397b;
+}
+.dashboard__tracking-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.dashboard__tracking-title {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.dashboard__ellipsis {
+  position: absolute;
+  top: 75px;
+  right: 30px;
+  z-index: 2;
+  transition: 0.3s;
+  transition-property: fill;
+  height: 20px;
+  fill: hsl(236deg, 100%, 87%);
+  padding: 7px 0;
+}
+.dashboard__ellipsis:hover {
+  fill: #fff;
+}
+.dashboard__tracking-times {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard__tracking-time {
+  transition: 0.3s;
+  transition-property: font-size;
+  font-size: 30px;
+}
+.dashboard__litel-text {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 16px;
+}
+
+@media (min-width: 830px) {
+  .dashboard__tile {
+    margin-bottom: 0;
+  }
+  .dashboard__tracking {
+    margin-top: 45px;
+    padding: 30px;
+  }
+  .dashboard__tracking-title {
+    margin-bottom: 35px;
+  }
+  .dashboard__tracking-time {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+  .dashboard__tracking-times {
+    display: block;
+  }
+}
+@media (min-width: 880px) {
+  .dashboard__tracking-time {
+    font-size: 44px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 950px) {
+  .dashboard__tracking-time {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1050px) {
+  .dashboard__tracking-time {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+}
