@@ -18,31 +18,31 @@ function createTile(data) {
    switch (name) {
       case 'Work':
          tile.classList.add('dashboard__work');
-         tileInnerHtml += '<img class="dashboard__icon" src="/images/icon-work.svg" alt="">';
+         tileInnerHtml += '<img class="dashboard__icon" src="./images/icon-work.svg" alt="">';
          break;
       case 'Play':
          tile.classList.add('dashboard__play');
-         tileInnerHtml += '<img class="dashboard__icon" src="/images/icon-play.svg" alt="">';
+         tileInnerHtml += '<img class="dashboard__icon" src="./images/icon-play.svg" alt="">';
          break;
       case 'Tracking':
          tile.classList.add('dashboard__tracking');
-         tileInnerHtml += '<img class="dashboard__icon" src="/images/icon-tracking.svg" alt="">';
+         tileInnerHtml += '<img class="dashboard__icon" src="./images/icon-tracking.svg" alt="">';
          break;
       case 'Study':
          tile.classList.add('dashboard__study');
-         tileInnerHtml += '<img class="dashboard__icon" src="/images/icon-study.svg" alt="">';
+         tileInnerHtml += '<img class="dashboard__icon" src="./images/icon-study.svg" alt="">';
          break;
       case 'Exercise':
          tile.classList.add('dashboard__exercise');
-         tileInnerHtml += '<img class="dashboard__icon" src="/images/icon-exercise.svg" alt="">';
+         tileInnerHtml += '<img class="dashboard__icon" src="./images/icon-exercise.svg" alt="">';
          break;
       case 'Social':
          tile.classList.add('dashboard__social');
-         tileInnerHtml += '<img class="dashboard__icon" src="/images/icon-social.svg" alt="">';
+         tileInnerHtml += '<img class="dashboard__icon" src="./images/icon-social.svg" alt="">';
          break;
       case 'Self Care':
          tile.classList.add('dashboard__self-care');
-         tileInnerHtml += '<img class="dashboard__icon" src="/images/icon-self-care.svg" alt="">';
+         tileInnerHtml += '<img class="dashboard__icon" src="./images/icon-self-care.svg" alt="">';
          break;
    
       default:
